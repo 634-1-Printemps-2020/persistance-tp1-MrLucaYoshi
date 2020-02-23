@@ -6,6 +6,9 @@ public class Counter implements ICounter {
 
     public Counter(int value) throws CounterException {
         this.value = value;
+        /*if(value<0){
+            throw new CounterException("Valeur inférieur à 0");
+        }*/
     }
 
     @Override
@@ -16,6 +19,9 @@ public class Counter implements ICounter {
     @Override
     public void add(int step) throws CounterException {
         value += step;
+        /*if(step<0){
+            throw new CounterException("La valeur a ajouter est inférieur à 0");
+        }*/
     }
 
     @Override
